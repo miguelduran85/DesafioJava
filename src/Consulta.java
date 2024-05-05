@@ -8,10 +8,10 @@ import java.net.http.HttpResponse;
 
 public class Consulta {
 
-    public Monedas buscaDeMoneda(String code1, String code2) {
+    public Monedas buscaDeMoneda(String code1, String code2,double cantidad) {
 
 
-        URI direccion = URI.create("https://v6.exchangerate-api.com/v6/8bf2c6d22a6e609fc8a9113f/pair/" + code1 + "/" + code2);
+        URI direccion = URI.create("https://v6.exchangerate-api.com/v6/8bf2c6d22a6e609fc8a9113f/pair/" + code1 + "/" + code2 + "/" + cantidad);
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(direccion)
